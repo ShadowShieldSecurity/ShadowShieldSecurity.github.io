@@ -70,7 +70,7 @@ body {
     --neon-color1: #00f0ff;
     --neon-color2: #e000ff;
     --text-color: #ffffff;
-    --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
+    --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adicione o ponto e vírgula aqui */
     --shadow-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -87,20 +87,15 @@ body {
     position: relative;
     cursor: pointer;
     transition: all 0.3s ease;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), /* Sombra escura para profundidade */
-                 -1px -1px 2px rgba(255, 255, 255, 0.3); /* Sombra clara para destaque */
+    text-shadow: var(--text-shadow); /* Usar a variável para a sombra do texto */
 
     /* Sombra do botão */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), /* Sombra leve embaixo */
-    0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra mais profunda */
+                0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra mais profunda */
 
     /* Efeito de borda neon */
     border: 3px solid transparent; /* Borda transparente para aplicar o efeito */
     background-clip: padding-box; /* Impede a borda de sobrepor o conteúdo */
-    
-    /* Gira a borda */
-    box-shadow: 0 4px 8px var(--shadow-color),
-                inset 0 8px 8px rgba(255, 255, 255, 0.1);
     
     /* Para a animação neon */
     background: linear-gradient(45deg, var(--neon-color1), var(--neon-color2));
@@ -127,11 +122,6 @@ body {
                 inset 0 12px 12px rgba(255, 255, 255, 0.2);
 }
 
-/* Efeito de sombra no texto */
-.custom-button {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
 /* Centralização dos botões */
 .button-container {
     display: flex;
@@ -143,16 +133,27 @@ body {
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
     #container {
-        gap: 10px;
+        gap: 5px; /* Ajusta o espaço entre os elementos */
     }
 
     .content {
-        width: 100%;
-        height: auto;
+        width: 90%; /* Ajusta a largura do conteúdo */
     }
 
     .message-box {
-        width: 100%;
+        width: 100%; /* Mantém a largura da caixa de mensagem */
+        font-size: 16px; /* Diminui o tamanho da fonte para se ajustar melhor */
+    }
+
+    .custom-button {
+        width: 100%; /* Botão ocupa a largura total em telas pequenas */
+        height: 2.5em; /* Ajusta a altura do botão */
+        font-size: 16px; /* Diminui o tamanho da fonte do botão */
+    }
+
+    .button-container {
+        flex-direction: column; /* Alinha os botões em coluna em vez de linha */
+        gap: 10px; /* Ajusta o espaço entre os botões */
     }
 }
 
