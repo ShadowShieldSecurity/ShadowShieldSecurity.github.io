@@ -57,6 +57,10 @@ body {
     border-radius: 15px;
     width: 100%;
     text-align: center;
+    width: 110ch; /* Aproximadamente 120 caracteres por linha */
+    word-wrap: break-word; /* Garante que palavras longas sejam quebradas */
+    white-space: normal; /* Faz com que o texto quebre em novas linhas */
+    overflow-wrap: break-word; /* Suporte adicional para quebra de linha */
 }
 
 /* ------------ BUTTON ------------ */
@@ -143,4 +147,12 @@ body {
     .message-box {
         width: 100%;
     }
+}
+
+/* Limita o texto a aproximadamente 120 caracteres por linha */
+.limited-text {
+    width: 100ch; /* Aproximadamente 120 caracteres por linha */
+    word-wrap: break-word; /* Garante que palavras longas sejam quebradas */
+    white-space: normal; /* Faz com que o texto quebre em novas linhas */
+    overflow-wrap: break-word; /* Suporte adicional para quebra de linha */
 }
