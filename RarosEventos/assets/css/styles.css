@@ -125,7 +125,8 @@ body {
 /* Centralização dos botões */
 .button-container {
     display: flex;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
     gap: 15px;
     margin-top: 20px;
 }
