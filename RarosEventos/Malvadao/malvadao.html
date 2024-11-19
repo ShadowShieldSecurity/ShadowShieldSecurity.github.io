@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador Malvadão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador Malvadão</h1>
+        <div class="content">
+            <!-- Inputs -->
+            <div class="inputs">
+                <form id="query-form">
+                    <!-- Minuto Final -->
+                    <div class="form-group compact">
+                        <label for="minuto">Minuto Final:</label>
+                        <input type="number" id="minuto" name="minuto" value="500" readonly>
+                    </div>
+
+                    <!-- Odds -->
+                    <div class="form-group compact">
+                        <label for="oddsCasa">Odds Casa:</label>
+                        <input type="number" id="oddsCasaMin" placeholder="Min" step="0.01">
+                        <input type="number" id="oddsCasaMax" placeholder="Max" step="0.01">
+                    </div>
+                    <div class="form-group compact">
+                        <label for="oddsVisitante">Odds Visitante:</label>
+                        <input type="number" id="oddsVisitanteMin" placeholder="Min" step="0.01">
+                        <input type="number" id="oddsVisitanteMax" placeholder="Max" step="0.01">
+                    </div>
+
+                    <!-- Minuto Personalizado -->
+                    <div class="form-group compact">
+                        <label for="minutoCustom">Minuto:</label>
+                        <input type="number" id="minutoCustom" placeholder="Ex: 20">
+                    </div>
+
+                    <!-- Pressão, Chutes e Ataques -->
+                    <div class="form-group compact">
+                        <label for="pressaoTotal">Pressão (>=):</label>
+                        <input type="number" id="pressaoTotal" placeholder="Ex: 30">
+                    </div>
+                    <div class="form-group compact">
+                        <label for="totalChutes">Chutes (>=):</label>
+                        <input type="number" id="totalChutes" placeholder="Ex: 2">
+                    </div>
+                    <div class="form-group compact">
+                        <label for="ataques">Ataques (>=):</label>
+                        <input type="number" id="ataques" placeholder="Ex: 30">
+                    </div>
+
+                    <!-- Gols Totais -->
+                    <div class="form-group compact">
+                        <label for="golsTotal">Gols Totais (>=):</label>
+                        <input type="number" id="golsTotal" placeholder="Ex: 2">
+                    </div>
+
+                    <!-- Botões -->
+                    <div class="form-buttons">
+                        <button type="button" id="generate-query">Vai Malvadão</button>
+                        <button type="reset">Resetar</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Resultado -->
+            <div id="query-result">
+                <pre id="query-output"></pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
